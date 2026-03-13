@@ -1,4 +1,4 @@
-import { add, subtract, multiply, divide } from "./calculator";
+import { add, subtract, multiply, divide, dividebyzero } from "./calculator";
 
 test("add four to three is seven", () => {
   // Arrange
@@ -47,6 +47,19 @@ test("divide twelve by three is four", () => {
 
   // Act
   const actual: number = divide(a, b);
+
+  // Assert
+  expect(actual).toBe(expected);
+});
+
+test("divide twelve by 0 is infinity", () => {
+  // Arrange
+  const a: number = 12;
+  const b: number = 0;
+  const expected: number = Infinity;
+
+  // Act
+  const actual: number = dividebyzero(a, b);
 
   // Assert
   expect(actual).toBe(expected);

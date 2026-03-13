@@ -13,3 +13,7 @@ export function multiply(minuend: number, subtrahend: number): number {
 export function divide(minuend: number, subtrahend: number): number {
   return minuend / subtrahend;
 }
+
+export function dividebyzero(minuend: number, subtrahend: number): number {
+  return minuend / subtrahend;
+}
