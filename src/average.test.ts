@@ -34,7 +34,7 @@ test("test mean of no numbers", () => {
 
 test("test median for odd number of elements", () => {
   // Arrange
-  const numbers: number[] = [1, 2, 6, 7, 8];
+  const numbers: number[] = [1, 2, 6, 7, 8, 9, 10];
   const expected: number = 6;
 
   // Act
@@ -46,7 +46,7 @@ test("test median for odd number of elements", () => {
 
 test("test median for even number of elements", () => {
   // Arrange
-  const numbers: number[] = [1, 2, 5, 6, 7, 8];
+  const numbers: number[] = [1, 2, 5, 6, 7, 8, 9, 10];
   const expected: number = 5.5;
 
   // Act
