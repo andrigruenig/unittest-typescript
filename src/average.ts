@@ -12,5 +12,16 @@ export function mean(numbers: number[]): number {
 }
 
 export function median(numbers: number[]): number {
-  return 0.0;
+  if (numbers.length === 0) {
+    throw new Error("Der Median ist für eine leere Liste nicht definiert.");
+  }
+
+  const sortedNumbers = [...numbers].sort((a, b) => a - b);
+  const middleIndex = Math.floor(sortedNumbers.length / 2);
+
+  if (sortedNumbers.length % 2 !== 0) {
+    return sortedNumbers[middleIndex];
+  }
+
+  return (sortedNumbers[middleIndex - 1] + sortedNumbers[middleIndex]) / 2;
 }
