@@ -15,5 +15,8 @@ export function divide(minuend: number, subtrahend: number): number {
 }
 
 export function dividebyzero(minuend: number, subtrahend: number): number {
+  if (subtrahend === 0) {
+    throw new Error("Der Divisor darf nicht 0 sein.");
+  }
   return minuend / subtrahend;
 }
