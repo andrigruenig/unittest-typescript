@@ -23,3 +23,11 @@ test("test mean of five numbers", () => {
   // Assert
   expect(actual).toBe(expected);
 });
+
+test("test mean of no numbers", () => {
+  // Arrange
+  const numbers: number[] = [];
+
+  // Act + Assert
+  expect(() => mean(numbers)).toThrow("Die Liste darf nicht leer sein.");
+});
