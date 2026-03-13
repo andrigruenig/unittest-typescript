@@ -9,3 +9,7 @@ export function subtract(minuend: number, subtrahend: number): number {
 export function multiply(minuend: number, subtrahend: number): number {
   return minuend * subtrahend;
 }
+
+export function divide(minuend: number, subtrahend: number): number {
+  return minuend / subtrahend;
+}
